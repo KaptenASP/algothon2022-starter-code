@@ -1,5 +1,5 @@
 import numpy as np
-from strategies import HeadAndShoulders
+from strategies import Strategies
 
 nInst = 100
 currentPos = np.zeros(nInst)
@@ -15,7 +15,7 @@ def getMyPosition(prcSoFar):
         if currentPos[num] != 0:
             continue
 
-        head_and_shoulders_pattern = HeadAndShoulders(i, 5)
+        head_and_shoulders_pattern = Strategies(i, 5)
         head_and_shoulders_pattern.extract_min_max()
         if head_and_shoulders_pattern.find_head_shoulders_pattern():
             currentPos[num] = -100
