@@ -1,4 +1,4 @@
-class HeadAndShoulders:
+class Strategies:
     def __init__(self, prices, period):
         self.extracted_lst = None
         self.min_points = None
